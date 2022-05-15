@@ -1,0 +1,215 @@
+.store-nav-container {
+  width: 940px;
+  height: 35px;
+  background: linear-gradient(
+    90deg, 
+    rgba(62, 103, 150, 0.919) 11.38%, 
+    rgba(58, 120, 177, 0.8) 25.23%, 
+    rgb(15, 33, 110) 100%
+  );
+  box-shadow: 0 0 3px rgb(0 0 0 / 40%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px 0 0;
+}
+
+.store-nav-items {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.store-nav-item {
+  position: relative;
+  color: #d9d9d9;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0px 2px 3px rgb(0 0 0 / 30%);
+  line-height: 33px;
+  transition: .4s;
+  padding: 0 0 0 15px;
+  cursor: pointer;
+}
+
+.store-nav-item a {
+  color: #d9d9d9;
+  text-decoration: none;
+}
+
+.store-nav-item:nth-child(2),
+.store-nav-item:nth-child(3)
+{
+  padding-left: 23px;
+}
+
+.store-nav-item:nth-child(2)::after,
+.store-nav-item:nth-child(3)::after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://store.cloudflare.steamstatic.com/public/images/v6/storemenu/new_white.svg?v=2) bottom left no-repeat;
+  background-position-y: 7px;
+  background-size: 26px 26px;
+}
+
+.store-nav-item:hover {
+  background: linear-gradient(
+    90deg, 
+    rgba(33, 162, 255, 0.25) 0%, 
+    rgba(33, 162, 255, 0.15) 50%, 
+    rgba(50, 50, 51, 0) 100%
+  );
+  text-shadow: 0px 2px 3px rgb(0 0 0 / 30%);
+  color: #fff;
+}
+
+.store-nav-categories-submenu-container,
+.store-nav-new_noteworthy-submenu-container,
+.store-nav-your_store-submenu-container {
+  position: absolute;
+  min-width: 167px;
+  background:
+    linear-gradient(
+      90deg, 
+    rgba(33, 162, 255, 0.1) 1.89%, 
+    rgba(50, 50, 51, 0) 50%
+    ), 
+    linear-gradient(
+      180deg, 
+      #575860 11.6%, 
+      #3A4852 54.73%, 
+      #2C2D34 100%
+    );
+  box-shadow: 0 0 12px #000000;
+  padding: 8px 5px 8px 5px;
+  display: none;
+  z-index: 10;
+}
+
+.store-nav-your_store-submenu-container {
+  top: 30px;
+  left: 0;
+}
+
+.store-nav-new_noteworthy-submenu-container {
+  top: 30px;
+  left: 102px;
+}
+
+.store-nav-categories-submenu-container {
+  top: 30px;
+  left: 0;
+  gap: 30px;
+  min-width: 940px;
+  padding-top: 0;
+}
+
+.store-nav-categories-submenu-list,
+.store-nav-new_noteworthy-submenu-list,
+.store-nav-your_store-submenu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  list-style: none;
+}
+
+.store-nav-categories-submenu-item,
+.store-nav-new_noteworthy-submenu-item,
+.store-nav-your_store-submenu-item {
+  color: #D8D8D8;
+  font-size: 13px;
+  text-shadow: 0px 2px 3px rgb(0 0 0 / 30%);
+  cursor: pointer;
+  margin: 0 10px 3px 13px;
+  transition: .15s;
+  border-bottom: 2px solid #ffffff00;
+  width: fit-content;
+}
+
+.store-nav-categories-submenu-item a,
+.store-nav-new_noteworthy-submenu-item a,
+.store-nav-your_store-submenu-item a {
+  color: #D8D8D8;
+  text-decoration: none;
+}
+
+.store-nav-categories-submenu-item:hover,
+.store-nav-new_noteworthy-submenu-item:hover,
+.store-nav-your_store-submenu-item:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.store-nav-categories-submenu-title {
+  padding: 5px 5px 4px 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  font-size: 11px;
+  color: #2EBFFF;
+  text-shadow: 0px 2px 3px rgb(0 0 0 / 30%);
+  margin-left: 13px;
+  margin-top: 20px;
+}
+
+.genres-container {
+  display: flex;
+  gap: 15px;
+  border-left: 1px solid #333333;
+  border-right: 1px solid #333333;
+}
+
+.genres-container .store-nav-categories-submenu-list:nth-child(2),
+.genres-container .store-nav-categories-submenu-list:nth-child(3)
+{
+  margin-top: 53px;
+}
+
+.store-nav-categories-submenu-item.subcategory {
+  font-weight: 800;
+}
+
+
+.store-nav-search-box {
+  background-color: #316282;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 0px rgb(255 255 255 / 20%);
+  color: #fff;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+}
+
+.store-nav-search-box:hover {
+  border: 1px solid lightseagreen;
+}
+
+.store-nav-search-input {
+  font-weight: normal;
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+  outline: none;
+  line-height: 26px;
+  color: #eeeeee;
+}
+
+.store-nav-search-input::placeholder {
+  color: #0e1c25;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.store-nav-search-box a {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}

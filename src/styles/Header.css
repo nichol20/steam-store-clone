@@ -1,0 +1,170 @@
+.steam-header {
+  width: 100%;
+  background: #171a21;
+  padding: 0 16px;
+}
+
+.steam-header .content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 940px;
+  height: 104px;
+  margin: 0px auto;
+}
+
+.steam-header .content .logo-container {
+  width: 176px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.nav-container .nav-container-menu {
+  position: relative;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.nav-container .nav-container-menu .nav-container-item a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #b8b6b4;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.nav-container .nav-container-menu .nav-container-item a:hover {
+  color:#fff;
+}
+
+.nav-community-submenu-container,
+.nav-store-submenu-container {
+  background: #171a21;
+  position: absolute;
+  max-width: 132px;
+  padding: 5px 15px 10px 15px;
+  box-shadow: 3px 3px 5px -3px #000;
+  transition: .2s;
+  text-align: left;
+  display: none;
+  z-index: 10;
+}
+
+.nav-store-submenu-container {
+  top: 20px;
+  left: 0;
+}
+
+.nav-community-submenu-container {
+  top: 20px;
+  left: 50px;
+}
+
+.nav-community-submenu-list,
+.nav-store-submenu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  list-style: none;
+}
+
+.nav-community-submenu-list .nav-community-submenu-item a,
+.nav-store-submenu-list .nav-store-submenu-item a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #b8b6b4;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.nav-community-submenu-list .nav-community-submenu-item a:hover,
+.nav-store-submenu-list .nav-store-submenu-item a:hover {
+  color: #fff;
+}
+
+.steam-header .content .actions-header {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  color: #b8b6b4;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.actions-header .install-steam-button {
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 9px 0 35px;
+  background-position: 10px 5px;
+  background-image: url(https://store.cloudflare.steamstatic.com/public/shared/images/header/btn_header_installsteam_download.png?v=1);
+  background-repeat: no-repeat;
+  color: #e5e4dc;
+  background-color: #5c7e10;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.actions-header .install-steam-button:hover {
+  color: #fff;
+}
+
+.actions-header > div {
+  display: flex;
+  gap: 5px;
+}
+.actions-header > div a {
+  text-decoration: none;
+  color: #e5e4dc;
+  transition: .2s;
+}
+
+.actions-header div a:hover {
+  color: #fff;
+}
+
+.actions-header .language-option {
+  position: relative;
+  color: #e5e4dc;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.actions-header .language-option:hover {
+  color: #fff;
+}
+
+.actions-header .language-option span {
+  background-image: url(https://store.cloudflare.steamstatic.com/public/shared/images/popups/btn_arrow_down_padded.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 18px;
+}
+
+.language-option-submenu-container {
+  background: #171a21;
+  width: 300px;
+  position: absolute;
+  top: 17px;
+  left: -240px;
+  padding: 5px 15px 10px 15px;
+  box-shadow: 3px 3px 5px -3px #000;
+  border: 1px solid #171a21;
+  transition: .2s;
+  text-align: left;
+  display: none;
+  z-index: 10;
+}
+
+.language-option-submenu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  list-style: none;
+  font-size: 12px;
+}
