@@ -88,8 +88,11 @@
     );
   box-shadow: 0 0 12px #000000;
   padding: 8px 5px 8px 5px;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
   z-index: 10;
+  transition: .5s;
 }
 
 .store-nav-your_store-submenu-container {

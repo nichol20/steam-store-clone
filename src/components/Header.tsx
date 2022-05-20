@@ -5,29 +5,39 @@ import Link from 'next/link'
 import logoSteam from '../images/logo_steam.svg'
 
 export const Header = () => {
-  const [ displayLanguageModal, setDisplayLanguageModal ] = useState('block')
+  const [ opacityLanguageModal, setOpacityLanguageModal ] = useState('1')
 
   const showStoreSubmenu = () => {
-    (document.querySelector('.nav-store-submenu-container') as HTMLDivElement).style.display = 'block'
+    (document.querySelector('.nav-store-submenu-container') as HTMLDivElement).style.opacity = '1';
+    (document.querySelector('.nav-store-submenu-container') as HTMLDivElement).style.pointerEvents = 'all';
   }
 
   const closeStoreSubmenu = () => {
-    (document.querySelector('.nav-store-submenu-container') as HTMLDivElement).style.display = 'none'
+    (document.querySelector('.nav-store-submenu-container') as HTMLDivElement).style.opacity = '0';
+    (document.querySelector('.nav-store-submenu-container') as HTMLDivElement).style.pointerEvents = 'none';
   }
   
   const showCommunitySubmenu = () => {
-    (document.querySelector('.nav-community-submenu-container') as HTMLDivElement).style.display = 'block'
+    (document.querySelector('.nav-community-submenu-container') as HTMLDivElement).style.opacity = '1';
+    (document.querySelector('.nav-community-submenu-container') as HTMLDivElement).style.pointerEvents = 'all';
   }
 
   const closeCommunitySubmenu = () => {
-    (document.querySelector('.nav-community-submenu-container') as HTMLDivElement).style.display = 'none'
+    (document.querySelector('.nav-community-submenu-container') as HTMLDivElement).style.opacity = '0';
+    (document.querySelector('.nav-community-submenu-container') as HTMLDivElement).style.pointerEvents = 'none';
   }
 
   const toggleLanguageOptionSubmenu = () => {
-    (document.querySelector('.language-option-submenu-container') as HTMLDivElement).style.display = displayLanguageModal
+    (document.querySelector('.language-option-submenu-container') as HTMLDivElement).style.opacity = opacityLanguageModal
 
-    if(displayLanguageModal === 'block') setDisplayLanguageModal('none');
-    else setDisplayLanguageModal('block');
+    if(opacityLanguageModal === '1') {
+      (document.querySelector('.language-option-submenu-container') as HTMLDivElement).style.pointerEvents = 'all'
+      setOpacityLanguageModal('0');
+    }
+    else {
+      (document.querySelector('.language-option-submenu-container') as HTMLDivElement).style.pointerEvents = 'none'
+      setOpacityLanguageModal('1');
+    }
   }
   
   return (

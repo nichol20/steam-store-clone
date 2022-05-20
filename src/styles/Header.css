@@ -46,20 +46,23 @@
   max-width: 132px;
   padding: 5px 15px 10px 15px;
   box-shadow: 3px 3px 5px -3px #000;
-  transition: .2s;
+  transition: .3s;
   text-align: left;
-  display: none;
+  opacity: 0;
   z-index: 10;
+  pointer-events: none;
 }
 
 .nav-store-submenu-container {
   top: 20px;
   left: 0;
+  pointer-events: none;
 }
 
 .nav-community-submenu-container {
   top: 20px;
   left: 50px;
+  pointer-events: none;
 }
 
 .nav-community-submenu-list,
@@ -155,10 +158,11 @@
   padding: 5px 15px 10px 15px;
   box-shadow: 3px 3px 5px -3px #000;
   border: 1px solid #171a21;
-  transition: .2s;
+  transition: .3s;
   text-align: left;
-  display: none;
   z-index: 10;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .language-option-submenu-list {

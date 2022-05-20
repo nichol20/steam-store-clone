@@ -7,27 +7,33 @@ import searchIcon from '../images/search_icon.png'
 export const StoreNav = () => {
 
   const showYourstoreSubmenu = () => {
-    (document.querySelector('.store-nav-your_store-submenu-container') as HTMLDivElement).style.display = 'block'
+    (document.querySelector('.store-nav-your_store-submenu-container') as HTMLDivElement).style.opacity = '1';
+    (document.querySelector('.store-nav-your_store-submenu-container') as HTMLDivElement).style.pointerEvents = 'all';
   }
 
   const closeYourstoreSubmenu = () => {
-    (document.querySelector('.store-nav-your_store-submenu-container') as HTMLDivElement).style.display = 'none'
+    (document.querySelector('.store-nav-your_store-submenu-container') as HTMLDivElement).style.opacity = '0';
+    (document.querySelector('.store-nav-your_store-submenu-container') as HTMLDivElement).style.pointerEvents = 'none'
   }
 
   const showNewandnoteworthySubmenu = () => {
-    (document.querySelector('.store-nav-new_noteworthy-submenu-container') as HTMLDivElement).style.display = 'block'
+    (document.querySelector('.store-nav-new_noteworthy-submenu-container') as HTMLDivElement).style.opacity = '1';
+    (document.querySelector('.store-nav-new_noteworthy-submenu-container') as HTMLDivElement).style.pointerEvents = 'all'
   }
 
   const closeNewandnoteworthySubmenu = () => {
-    (document.querySelector('.store-nav-new_noteworthy-submenu-container') as HTMLDivElement).style.display = 'none'
+    (document.querySelector('.store-nav-new_noteworthy-submenu-container') as HTMLDivElement).style.opacity = '0';
+    (document.querySelector('.store-nav-new_noteworthy-submenu-container') as HTMLDivElement).style.pointerEvents = 'none';
   }
 
   const showCategoriesSubmenu = () => {
-    (document.querySelector('.store-nav-categories-submenu-container') as HTMLDivElement).style.display = 'flex'
+    (document.querySelector('.store-nav-categories-submenu-container') as HTMLDivElement).style.opacity = '1';
+    (document.querySelector('.store-nav-categories-submenu-container') as HTMLDivElement).style.pointerEvents = 'all'
   }
 
   const closeCategoriesSubmenu = () => {
-    (document.querySelector('.store-nav-categories-submenu-container') as HTMLDivElement).style.display = 'none'
+    (document.querySelector('.store-nav-categories-submenu-container') as HTMLDivElement).style.opacity = '0';
+    (document.querySelector('.store-nav-categories-submenu-container') as HTMLDivElement).style.pointerEvents = 'none'
   }
 
   return (

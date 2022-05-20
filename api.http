@@ -1,0 +1,4 @@
+GET http://localhost:3000/api/banners
+
+###
+GET http://localhost:3000/api/special-offers

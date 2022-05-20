@@ -1,0 +1,259 @@
+.main-banner-box {
+  position: relative;
+  margin-top: 10px;
+}
+
+.main-banner-box > .arrow-left {
+  color: #c6d4df;
+  box-sizing: content-box;
+  position: absolute;
+  cursor: pointer;
+  z-index: 13;
+  top: 100px;
+  left: -46px;
+  background: linear-gradient(
+    to right, 
+    rgba( 0, 0, 0, 0.3) 5%,
+    rgba( 0, 0, 0, 0) 95%
+  );
+  width: 23px;
+  height: 36px;
+  padding: 36px 11px;
+}
+
+.main-banner-box > .arrow-left > div {
+  width: 23px;
+  height: 36px;
+  background-position-x: 23px;
+  background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/arrows.png);
+}
+.main-banner-box > .arrow-left:hover {
+  background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+}
+
+.main-banner-box > .arrow-right {
+  color: #c6d4df;
+  box-sizing: content-box;
+  position: absolute;
+  top: 100px;
+  right: -46px;
+  z-index: 13;
+  cursor: pointer;
+  background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
+  width: 23px;
+  height: 36px;
+  padding: 36px 11px;
+}
+
+.main-banner-box > .arrow-right > div {
+  width: 23px;
+  height: 36px;
+  background-position-x: 0;
+  background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/arrows.png);
+
+}
+
+.main-banner-box > .arrow-right:hover {
+  background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
+}
+
+.main-banner-box .info-card {
+  position: absolute;
+  z-index: 20;
+  top: 34px;
+  left: -320px;
+  padding: 16px;
+  box-shadow: 0 0 12px #000000;
+  width: 306px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(227,234,239,1) 0%,rgba(199,213,224,1) 100%);
+  transition: .3s;
+  opacity: 0;
+}
+
+.main-banner-box .info-card .game-name {
+  color: #222d3d;
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.main-banner-box .info-card .released-date {
+  font-size: 10px;
+  color: #30455a;
+}
+
+.main-banner-box .info-card .screenshot-container {
+  width: 274px;
+  height: 153px;
+  margin: 5px 0;
+}
+
+.main-banner-box .info-card .reviews-container {
+  border-radius: 2px;
+  padding: 4px;
+  color: #c6d4df;
+  background-color: rgba( 38, 54, 69, 0.6);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.main-banner-box .info-card .reviews-container span {
+  color: #66C0F4;
+}
+
+.main-banner-box .info-card .tags-container {
+  color: #30455a;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.main-banner-box .info-card .tags-container .tags {
+  height: 19px;
+  display: flex;
+  gap: 2px;
+}
+
+.main-banner-box .info-card .tags-container .tags .tag {
+  background-color: #96a3ae;
+  color: rgba(227,234,239,1);
+  box-shadow: none;
+  padding: 0 4px;
+  font-size: 11px;
+  border-radius: 2px;
+}
+
+.main-banner-box .info-card > .arrow-right {
+  width: 7px;
+  height: 15px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAYAAADUFP50AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJlJREFUeNqc0k0KgCAQBlCdI0SLlkEtu4DLTt6yC7SN2hX0cwWbCQvDMa0PBhN9EsxIrbXgMs57RWueJR13Di+ooboeCEILpaZYDC/oCoshgLwYIhCL5TBtMcjOilUT1OJH6FdLrOWDobslYIN7/FCRmO4oMmCmIwbf6NGOAH4gZwA82EFnO7ghx14VuLRm6yAvtLDgEOUQYADt6VgCZRDsZgAAAABJRU5ErkJggg==) no-repeat top;
+  position: absolute;
+  background-position: right;
+  top: 8px;
+  right: -7px;
+}
+
+.section-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+}
+
+.main-banner-image-container {
+  position: relative;
+  z-index: 9;
+  width: 616px;
+  height: 353px;
+  box-shadow: 0 0 10px 5px #000;
+  cursor: pointer;
+}
+
+.main-banner-info {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  background-image: url(https://store.cloudflare.steamstatic.com/public/images/v6/home/background_maincap_2.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 314px;
+  height: 353px;
+  border: 1px solid rgb(32, 32, 32);
+  box-shadow: 0 0 7px 0px #000;
+}
+
+.main-banner-info .game-name {
+  font-size: 24px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-weight: normal;
+  padding-left: 15px;
+  margin: 0 0 160px 0;
+}
+
+.main-banner-info .screenshots {
+  position: absolute;
+  top: 70px;
+  right: 15px;
+  display: grid;
+  grid-template-columns: 162px 162px;
+  grid-template-rows: 69px 69px;
+  gap: 10px;
+}
+
+.main-banner-info .screenshot-container {
+  width: 162px;
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0.6;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.main-banner-info .screenshot-container:hover {
+  opacity: 1;
+}
+
+.main-banner-info .reason {
+  margin-left: 15px;
+}
+
+.main-banner-info .reason .main {
+  font-size: 21px;
+  font-weight: 200;
+}
+
+.main-banner-info .reason .additional {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: rgba( 255, 255, 255, 0.2 );
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.main-banner-info .price {
+  color: #acdbf5;
+  font-size: 11px;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+
+.carousel-thumbs {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+  height: 37px;
+  width: 100%;
+}
+
+.carousel-thumbs > div {
+  display: inline-block;
+  margin: 12px 2px;
+  width: 15px;
+  height: 9px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+  background-color: hsla(202,60%,100%,0.2);
+  cursor: pointer;
+}
+
+.carousel-thumbs > div:hover {
+  background-color: hsla(202,60%,100%,0.3);
+}
+
+.carousel-thumbs .focus {
+  background-color: hsla(202,60%,100%,0.4);
+}
