@@ -9,6 +9,7 @@ interface MainBannerProps {
 export const MainBanner = ({ gamesData }: MainBannerProps) => {
   const [ currentGameBannerIndex, setCurrentGameBannerIndex ] = useState(0)
   const [ currentBannerImage, setCurrentBannerImage ] = useState(gamesData[currentGameBannerIndex].data.header_image)
+  const [ currentInfocardScreenshotIndex, setCurrentInfocardScreenshotIndex ] = useState(0)
 
   const tags = gamesData[currentGameBannerIndex].data.categories.filter(category => ["Multi-player", "Coop", "Single-player","Online Co-op", "Online PvP", "Co-op", "PvP"].includes(category.description))
   tags.push(...gamesData[currentGameBannerIndex].data.genres)
@@ -69,6 +70,13 @@ export const MainBanner = ({ gamesData }: MainBannerProps) => {
 
   useEffect(() => {
       setInterval(() => handleArrowClickCarrouselThumb('next'), 10000)
+      setInterval(() => {
+        setCurrentInfocardScreenshotIndex(prevState => {
+          console.log(prevState)
+          if(prevState >= 3) return 0
+          else return prevState + 1
+        })
+      }, 1000)
   }, [])
 
   useEffect(() => {
@@ -88,7 +96,7 @@ export const MainBanner = ({ gamesData }: MainBannerProps) => {
               {gamesData[currentGameBannerIndex].data.release_date.date.replace('/', ' ').replace('.', ',')}
             </span>
             <div className="screenshot-container">
-              <Image src={gamesData[currentGameBannerIndex].data.screenshots[0].path_full} alt="" width={274} height={153} />
+              <Image src={gamesData[currentGameBannerIndex].data.screenshots[currentInfocardScreenshotIndex].path_full} alt="" width={274} height={153} />
             </div>
             <div className="reviews-container">
               Overall user reviews: <br />

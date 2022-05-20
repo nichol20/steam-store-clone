@@ -1,12 +1,12 @@
 import Image from 'next/image'
-import React, { MouseEvent, useState } from 'react'
+import React, { MouseEvent, useEffect, useState } from 'react'
 import { GameDetail } from '../pages/api/banners'
 
 interface SpecialOffersProps {
   gamesData: GameDetail[]
 }
 
-const infoCard = (game: GameDetail) => {
+const infoCard = (game: GameDetail, screenshotIndex: number) => {
   const id = `${game.data.name.replace(/[\s™:!']/g,'')}`
 
   const tags = game.data.categories.filter(category => ["Multi-player", "Coop", "Single-player","Online Co-op", "Online PvP", "Co-op", "PvP"].includes(category.description))
@@ -20,7 +20,7 @@ const infoCard = (game: GameDetail) => {
         {game.data.release_date.date.replace('/', ' ').replace('.', ',')}
       </span>
       <div className="screenshot-container">
-        <Image src={game.data.screenshots[0].path_full} alt="" width={274} height={153} />
+        <Image src={game.data.screenshots[screenshotIndex].path_full} alt="" width={274} height={153} />
       </div>
       <div className="reviews-container">
         Overall user reviews: <br />
@@ -45,6 +45,7 @@ const infoCard = (game: GameDetail) => {
 
 export const SpecialOffers = ({ gamesData }: SpecialOffersProps) => {
   const [ currentBannerIndex, setCurrentBannerIndex ] = useState(0)
+  const [ currentInfocardScreenshotIndex, setCurrentInfocardScreenshotIndex ] = useState(0)
   const banners = [gamesData.slice(0, 4), gamesData.slice(4, 8), gamesData.slice(8, 14), gamesData.slice(14, 20)]
 
   const showInfoCard = (id: string) => {
@@ -92,6 +93,15 @@ export const SpecialOffers = ({ gamesData }: SpecialOffersProps) => {
     thumbsArray[currentFocusIndex].classList.add('focus')
   }
 
+  useEffect(() => {
+    setInterval(() => {
+      setCurrentInfocardScreenshotIndex(prevState => {
+        if(prevState >= 3) return 0
+        else return prevState + 1
+      })
+    }, 1000)
+  }, [])
+
   return (
     <section className="special-offers-container">
         <div className="special-offers-header">
@@ -127,7 +137,7 @@ export const SpecialOffers = ({ gamesData }: SpecialOffersProps) => {
                                 </div>
                               </div>
                             </div>
-                            { infoCard(game) }
+                            { infoCard(game, currentInfocardScreenshotIndex) }
                           </div>
                         </div>
                       )
@@ -151,7 +161,7 @@ export const SpecialOffers = ({ gamesData }: SpecialOffersProps) => {
                                 </div>
                               </div>
                             </div>
-                            { infoCard(game) }
+                            { infoCard(game, currentInfocardScreenshotIndex) }
                           </div>
                           <div
                            className="special-offer"
@@ -168,7 +178,7 @@ export const SpecialOffers = ({ gamesData }: SpecialOffersProps) => {
                                 </div>
                               </div>
                             </div>
-                            { infoCard(banners[currentBannerIndex][index + 1]) }
+                            { infoCard(banners[currentBannerIndex][index + 1], currentInfocardScreenshotIndex) }
                           </div>
                         </div>
                       )
@@ -195,7 +205,7 @@ export const SpecialOffers = ({ gamesData }: SpecialOffersProps) => {
                                 </div>
                               </div>
                             </div>
-                            { infoCard(game) }
+                            { infoCard(game, currentInfocardScreenshotIndex) }
                           </div>
                           <div
                            className="special-offer"
@@ -212,7 +222,7 @@ export const SpecialOffers = ({ gamesData }: SpecialOffersProps) => {
                                 </div>
                               </div>
                             </div>
-                            { infoCard(banners[currentBannerIndex][index + 1]) }
+                            { infoCard(banners[currentBannerIndex][index + 1], currentInfocardScreenshotIndex) }
                           </div>
                         </div>
                       )
