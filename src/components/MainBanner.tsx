@@ -72,7 +72,6 @@ export const MainBanner = ({ gamesData }: MainBannerProps) => {
       setInterval(() => handleArrowClickCarrouselThumb('next'), 10000)
       setInterval(() => {
         setCurrentInfocardScreenshotIndex(prevState => {
-          console.log(prevState)
           if(prevState >= 3) return 0
           else return prevState + 1
         })
